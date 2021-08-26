@@ -131,5 +131,31 @@ And finally compare whether numberOfSlots == 0 (If Yes) return true else return 
 '''
 
 
-
+class Solution:
+    def isValidSerialization(self, preorder: str) -> bool:
+        
+        #based on the approach in the discussion thread
+        
+        temp = preorder.split(',')
+        
+        numSlots = 1
+        
+        for node in temp:
+            
+            numSlots -= 1
+            
+            
+            print(node, numSlots)
+            
+            
+            if numSlots < 0:
+                return False
+            
+            if node != '#':
+                numSlots += 2
+            
+        
+        
+        print(numSlots)
+        return numSlots == 0
 
