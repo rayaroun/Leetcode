@@ -1,3 +1,5 @@
+#94 Test cases passed out of 98 with the script
+
 from typing import List
 
 class Solution:
