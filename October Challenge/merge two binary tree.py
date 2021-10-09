@@ -46,7 +46,7 @@ Constraints:
 #         self.left = left
 #         self.right = right
 class Solution:
-    def mergeTrees(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> Optional[TreeNode]:
+    def mergeTrees(self, t1: Optional[TreeNode], t2: Optional[TreeNode]) -> Optional[TreeNode]:
         if t1 and t2:
             root = TreeNode(t1.val + t2.val)
             root.left = self.mergeTrees(t1.left, t2.left)
